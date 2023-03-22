@@ -9,10 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "circletype": "^2.3.0",
+    "classnames": "^2.3.2",
+    "curtainsjs": "^8.1.4",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
+    "framer-motion": "^10.2.4",
+    "gsap": "^3.11.4",
+    "imagesloaded": "^5.0.0",
+    "locomotive-scroll": "^4.1.4",
+    "lodash.random": "^3.2.0",
+    "motion": "^10.15.5",
     "next": "13.2.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-curtains": "^1.0.10",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0"
   }
 }

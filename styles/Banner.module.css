@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600&family=Signika:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+
+.container {
+  visibility: hidden;
+  position: relative;
+}
+
+.herocontainer {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 4em 0;
+  opacity: 0;
+}
+
+#headertext {
+  font-family: 'Azeret Mono';
+  line-height: 1.2;
+  font-weight: 600;
+  font-size: 13vw;
+  color: #fff;
+}
+
+.text {
+  margin: 1em 0 0 0;
+  font-family: 'Megrim', cursive;
+  font-size: 24px;
+  color: #fff;
+}
+
+.lineParent {
+  overflow: hidden;
+}
+
+.lineChildren {
+  transform: translate(0, 500px);
+}
+
+.bggradient {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0;
+}
+
+.blob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animate-blob 4s ease-in-out infinite;
+  scale: 0;
+}
+
+@keyframes animate-blob {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+.blob1 {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 400px;
+  height: 400px;
+  background: url(../public/vid2.mp4) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+/* Media Queries for Mobile and Tablet */
+@media (max-width: 767px) {
+  #headertext {
+    font-size: 15vw;
+  }
+
+  .text {
+    font-size: 18px;
+    color: #fff;
+    mix-blend-mode: difference;
+  }
+
+  .bggradient  {
+    width: 300px;
+    height: 300px;
+    top: 60%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #headertext {
+    font-size: 11vw;
+  }
+
+  .text {
+    font-size: 30px;
+  }
+
+  .blob1 {
+    width: 300px;
+    height: 300px;
+  }
+}

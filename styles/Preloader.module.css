@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+
+
+
+.loadercontainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  background-color: #fff;
+}
+
+.quote{
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  font-family: "Bai jamjuree";
+  color: #000;
+}
+
+.dreams{
+  color: #3944bc;
+  font-family: 'Megrim', cursive;
+  font-size: 50px;
+
+}
+
+.nightmare{
+  color: #d10000;
+  font-family: 'Megrim', cursive;
+  font-size: 50px;
+}
+
+.countercontainer {
+  overflow: hidden;
+  height: 30vw;
+  min-height: 30vw;
+}
+
+.countercontainer h3 {
+  z-index: 9999;
+  margin-top: 0px;
+  margin-bottom: 1vw;
+  color: #000;
+  font-size: 30vw;
+  line-height: 30vw;
+  font-weight: 300;
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .quote {
+    top: 40%;
+    left: 50%;
+    font-size: 18px;
+  }
+
+  .dreams,
+  .nightmare {
+    font-size: 60px;
+    font-weight: 400;
+  }
+
+  .countercontainer h3 {
+    font-size: 30vw;
+    margin-bottom: 2vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote {
+    top: 45%;
+    left: 50%;
+    font-size: 14px;
+  }
+
+  .dreams,
+  .nightmare {
+    font-size: 60px;
+    font-weight: 400;
+
+  }
+
+  .countercontainer h3 {
+    font-size: 30vw;
+    margin-bottom: 3vw;
+  }
+}

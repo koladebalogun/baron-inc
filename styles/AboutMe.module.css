@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+
+/* Header styles */
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  width: auto;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.container.fluid {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1216px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+
+@media (min-width: 1408px) {
+  .container {
+    max-width: 1560px;
+  }
+}
+
+.container .row {
+  display: flex;
+  align-items: center;
+}
+
+.container .row.space-between {
+  justify-content: space-between;
+}
+
+.container .row.center {
+  justify-content: center;
+}
+
+main .container {
+  position: relative;
+}
+main .container .row {
+  height: 100vh;
+  align-items: center;
+}
+main .container .row .imagecontainer {
+  position: relative;
+}
+main .container .row .imagecontainer .thumbnail {
+  overflow: hidden;
+  position: relative;
+}
+main .container .row .imagecontainer .thumbnail .frame img {
+  width: 100%;
+}
+main .container .row .imagecontainer .information {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+main .container .row .imagecontainer .information .location span:nth-child(2) {
+  margin-left: 8px;
+}
+.single .container .toprow {
+  height: 50vh;
+  width: 100%;
+  align-items: flex-end;
+}
+.single .container .toprow .top {
+  padding-bottom: 40px;
+}
+.single .container .toprow .top .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.single .container .toprow .top .details .location span:nth-child(2) {
+  margin-left: 16px;
+}
+.single .container .toprow .top .details .mua {
+  text-transform: uppercase;
+}
+.single .container .toprow .top .model {
+  overflow: hidden;
+}
+.single .container .toprow .top .model .first {
+  margin-right: 72px;
+}
+.single .container .toprow .top .model span {
+  display: inline-block;
+  position: relative;
+  font-weight: 400;
+  font-size: 224px;
+  font-family: "Maragsa";
+}
+@media (max-width: 1440px) {
+  .single .container .toprow .top .model span {
+    font-size: 128px;
+  }
+}
+.single .container .bottomrow {
+  height: 50vh;
+  position: relative;
+}
+.single .container .bottomrow .bottom {
+  height: 100%;
+  width: 100%;
+}
+.single .container .bottomrow .bottom .thumbnailsingle {
+  width: 100%;
+  height: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.single .container .bottomrow .bottom .thumbnailsingle .framesingle img {
+  position: absolute;
+  width: 100%;
+}
+.single .container .bottomrow .scroll-for-more {
+  position: absolute;
+  bottom: 200px;
+  left: 200px;
+  z-index: 20;
+}
+.single .container .bottomrow .scroll-for-more .icon svg {
+  height: auto;
+  width: 28px;
+}
+.single .container .bottomrow .scroll-for-more .text {
+  margin-top: 8px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.detailedinformation {
+  margin-top: 200px;
+  height: 600px;
+}
+.detailedinformation .container .row {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.detailedinformation .container .row h2 {
+  font-size: 28px;
+}
+.detailedinformation .container .row p {
+  font-family: "Helvetica Neue";
+  font-size: 16;
+  line-height: 28px;
+  font-weight: 400;
+  width: 800px;
+}

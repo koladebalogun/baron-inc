@@ -1,0 +1,54 @@
+.container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  margin: 50px 0;
+}
+
+.wrapper .button {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  overflow: hidden;
+  margin: 0 5px;
+   border-radius: 50px;
+  cursor: pointer;
+}
+
+
+.wrapper .button .icon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+
+.icon a{
+    color: #fff;
+}
+
+.wrapper .button:nth-child(1) .icon {
+  background: #1da1f2;
+}
+
+.wrapper .button:nth-child(2) .icon {
+  background: #e1306c;
+}
+
+.wrapper .button:nth-child(3) .icon {
+  background: #333;
+}
+
+.wrapper .button .icon .fab {
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+
