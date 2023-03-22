@@ -47,7 +47,7 @@ const letter = {
   },
 };
 
-export default function index() {
+export default function AboutMe() {
   const scrollRef = useRef(null);
   const textRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState();

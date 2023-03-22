@@ -9,7 +9,7 @@ function getSectionHeight(element) {
   return height / childElementCount;
 }
 
-export default function index({ titleRef, imageRef }) {
+export default function Preloader({ titleRef, imageRef }) {
   const loaderRef = useRef();
   const counterRef = useRef();
   const counterRef2 = useRef();

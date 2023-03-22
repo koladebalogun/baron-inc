@@ -4,7 +4,7 @@ import { AiFillGithub } from "react-icons/ai";
 import styles from "../../styles/Socials.module.css";
 import Link from "next/link";
 
-export default function index() {
+export default function Socials() {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>

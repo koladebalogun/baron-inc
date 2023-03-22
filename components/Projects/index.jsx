@@ -6,7 +6,7 @@ import Socials from "../Socials"
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function index() {
+export default function Projects() {
   const sectionRef = useRef(null);
   const video1Ref = useRef(null);
   const video2Ref = useRef(null);

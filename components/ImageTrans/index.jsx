@@ -5,7 +5,7 @@ import cn from "classnames";
 import CursorManager, { CursorContext } from "../CustomCursor/CursorManager";
 import useOnScreen from "../../utils/useOnscreen";
 
-export default function index({ imageDetails, image }) {
+export default function ImageTrans({ imageDetails, image }) {
   const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
   const [reveal, setReveal] = useState(false);
