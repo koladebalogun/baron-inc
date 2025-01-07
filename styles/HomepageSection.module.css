@@ -116,6 +116,16 @@
   /* -webkit-text-stroke: 2px #000; */
 }
 
+.text{
+  position: absolute;
+  z-index: 1;
+  right: 2%;
+  bottom: 40%;
+  font-size: 22px;
+  font-weight: bold;
+  color: yellow;
+}
+
 .sepia {
   filter: grayscale(100%) sepia(20%) brightness(80%);
 }

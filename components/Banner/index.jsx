@@ -19,25 +19,25 @@ export default function Home() {
     class: "is-reveal",
   });
 
-  useEffect(() => {
-    const split = new SplitText(headertextRef.current, {
-      type: "lines",
-      linesClass: "lineChildren",
-    });
+  // useEffect(() => {
+  //   const split = new SplitText(headertextRef.current, {
+  //     type: "lines",
+  //     linesClass: "lineChildren",
+  //   });
 
-    const splitParent = new SplitText(headertextRef.current, {
-      type: "lines ",
-      linesClass: "lineParent",
-    });
+  //   const splitParent = new SplitText(headertextRef.current, {
+  //     type: "lines ",
+  //     linesClass: "lineParent",
+  //   });
 
-    gsap.to(split.lines, {
-      duration: 1,
-      y: 0,
-      opacity: 1,
-      stagger: 0.1,
-      ease: "power2",
-    });
-  }, []);
+  //   gsap.to(split.lines, {
+  //     duration: 1,
+  //     y: 0,
+  //     opacity: 1,
+  //     stagger: 0.1,
+  //     ease: "power2",
+  //   });
+  // }, []);
 
   useEffect(() => {
     gsap.to(containerRef.current, 0, { css: { visibility: "visible" } });
@@ -108,10 +108,22 @@ export default function Home() {
               style={{ color: "#fff" }}
               ref={headertextRef}
             >
-              *FrontEnd <br />
-              Magic* <br />
+              *BARON-INC* <br />
             </h1>
-            <p className={style.text}>I transform ideas into magic!</p>
+            <p className={style.text}>
+              Welcome to Baron-inc Events, where passion meets performance. We
+              are the ultimate fusion of entertainment and sports excellence,
+              crafting unforgettable experiences and empowering talent to
+              shine on the global stage. Our mission is to be the premier
+              destination for those who value the thrill of competition, the
+              art of entertainment, and the pursuit of greatness.
+            </p>
+            <p
+              className={style.text}
+              style={{ textDecoration: "underline", color: "yellow" }}
+            >
+              Scroll down
+            </p>
           </div>
         </div>
       </section>

@@ -105,16 +105,13 @@ export default function Projects() {
       <div className={styles.mainwrapper} ref={containerRef}>
         <section className={styles.section} ref={sectionRef}>
           <div className={styles.sectioninner}>
-            <video
-              src="/vid2.mp4"
-              autoPlay
-              muted
-              loop
+            <img
+              src="/image10.jpg"
               className={styles.video1}
               ref={video1Ref}
             />
-            <video
-              src="/nft.mp4"
+            <img
+              src="/image10.jpg"
               // autoPlay
               // muted
               // loop
@@ -124,7 +121,7 @@ export default function Projects() {
 
             <div className={styles.titleContainer} ref={titleRef}>
               <div className={styles.title}>
-                <h1>Projects {">"}</h1>
+                <h1>Artists we've worked with {">"}</h1>
               </div>
             </div>
           </div>
@@ -132,62 +129,58 @@ export default function Projects() {
 
         <section className={styles.section2}>
           <div className={styles.nav}>
-            <div className={styles.navitem}>project gallery</div>
+            {/* <div className={styles.navitem}>gallery</div> */}
           </div>
           <div className={styles.container}>
             <div className={styles.items}>
               <div className={styles.item}>
                 <div className={styles.itemwrapper}>
-                  <img src="/i1.png" alt="" />
+                  <img src="/image11.jpg" alt="" />
                   <div className={styles.imageoverlay}></div>
                   <div className={styles.itemcopy}>
-                    <div className={styles.itemname}>Angelina Pownall</div>
-                    <div className={styles.id}>1</div>
+                    <div className={styles.itemname}>Seyi Vibez</div>
+                    {/* <div className={styles.id}>1</div> */}
                   </div>
                 </div>
               </div>
 
               <div className={styles.item}>
                 <div className={styles.itemwrapper}>
-                  <img src="/i2.png" alt="" />
+                  <img src="/image12.jpg" alt="" />
                   <div className={styles.imageoverlay}></div>
                   <div className={styles.itemcopy}>
                     <div className={styles.itemname}>
-                      Dall-e image-generator
+                      Mayorkun
                     </div>
-                    <div className={styles.id}>2</div>
+                    {/* <div className={styles.id}>2</div> */}
                   </div>
                 </div>
               </div>
 
               <div className={styles.item}>
                 <div className={styles.itemwrapper}>
-                  <img src="/i3.png" alt="" />
+                  <img src="/image13.jpg" alt="" />
                   <div className={styles.imageoverlay}></div>
                   <div className={styles.itemcopy}>
-                    <div className={styles.itemname}>Cryptowurld</div>
-                    <div className={styles.id}>3</div>
+                    <div className={styles.itemname}>Tekno</div>
+                    {/* <div className={styles.id}>3</div> */}
                   </div>
                 </div>
               </div>
 
               <div className={styles.item}>
                 <div className={styles.itemwrapper}>
-                  <img src="/i4.png" alt="" />
+                  <img src="/image14.jpg" alt="" />
                   <div className={styles.imageoverlay}></div>
                   <div className={styles.itemcopy}>
-                    <div className={styles.itemname}>Unilend Finance</div>
-                    <div className={styles.id}>4</div>
+                    <div className={styles.itemname}>Bella Schmurda</div>
+                    {/* <div className={styles.id}>4</div> */}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-      </div>
-
-      <div>
-        <Socials />
       </div>
     </>
   );

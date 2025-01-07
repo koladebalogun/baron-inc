@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -9,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "aos": "^2.3.4",
     "circletype": "^2.3.0",
     "classnames": "^2.3.2",
     "curtainsjs": "^8.1.4",

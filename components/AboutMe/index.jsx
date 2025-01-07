@@ -56,7 +56,6 @@ export default function AboutMe() {
 
   const [canScroll, setCanScroll] = useState(false);
 
-
   useEffect(() => {
     if (canScroll === false) {
       document.querySelector("body").classList.add("no-scroll");
@@ -68,8 +67,6 @@ export default function AboutMe() {
   useEffect(() => {
     setWindowWidth(window.innerWidth);
   }, []);
-
-  
 
   console.log(windowWidth);
 
@@ -101,23 +98,25 @@ export default function AboutMe() {
               </motion.div>
               <motion.div className="model">
                 <motion.span className="first" variants={firstName}>
-                  <motion.span variants={letter}>K</motion.span>
-                  <motion.span variants={letter}>o</motion.span>
-                  <motion.span variants={letter}>l</motion.span>
-                  <motion.span variants={letter}>a</motion.span>
-                  <motion.span variants={letter}>d</motion.span>
-                  <motion.span variants={letter}>e</motion.span>
+                  <motion.span variants={letter}>B</motion.span>
+                  <motion.span variants={letter}>A</motion.span>
+                  <motion.span variants={letter}>R</motion.span>
+                  <motion.span variants={letter}>O</motion.span>
+                  <motion.span variants={letter}>N</motion.span>
                 </motion.span>
                 <motion.span className="last" variants={lastName}>
-                  <motion.span variants={letter}>B</motion.span>
-                  <motion.span variants={letter}>a</motion.span>
-                  <motion.span variants={letter}>l</motion.span>
-                  <motion.span variants={letter}>o</motion.span>
-                  <motion.span variants={letter}>g</motion.span>
-                  <motion.span variants={letter}>u</motion.span>
-                  <motion.span variants={letter}>n</motion.span>
+                  <motion.span variants={letter}>E</motion.span>
+                  <motion.span variants={letter}>V</motion.span>
+                  <motion.span variants={letter}>E</motion.span>
+                  <motion.span variants={letter}>N</motion.span>
+                  <motion.span variants={letter}>T</motion.span>
+                  <motion.span variants={letter}>S</motion.span>
                 </motion.span>
               </motion.div>
+
+              <div>
+                <p style={{color:"#FEBE10"}}>scroll down</p>
+              </div>
             </div>
           </div>
           <div className="row bottom-row">
@@ -143,7 +142,7 @@ export default function AboutMe() {
                     transition={transition}
                   >
                     <motion.img
-                      src="/IMG6.JPG"
+                      src="/image8.jpg"
                       alt="an image"
                       style={{ scale: scale }}
                       initial={{ scale: 1.0 }}
@@ -163,13 +162,20 @@ export default function AboutMe() {
           <div className="container">
             <div className="text">
               <p>
-              I am a detail-oriented and innovative frontend developer with a keen eye for design. I strive to deliver cutting-edge, accessible, and seamless web experiences that exceed client expectations.
+                At Baron-inc Events, we’re driven by a passion for delivering
+                unparalleled experiences in entertainment and sports. From
+                curating unforgettable events to nurturing top-tier talent,
+                we’re here to bring your visions to life and help you achieve
+                your goals. Every project we undertake is thoughtfully
+                crafted with precision and creativity, ensuring that you feel
+                empowered, celebrated, and at the center of the action. Our
+                team is dedicated to providing exceptional support, whether
+                you’re an entertainer, or enthusiast. At Baron-inc, it’s about creating a legacy worth remembering.
               </p>
             </div>
           </div>
         </div>
       </motion.div>
-      
     </div>
   );
 }

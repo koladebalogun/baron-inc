@@ -279,7 +279,7 @@ section {
 }
 
 .text {
-  font-size: 70px;
+  font-size: 40px;
   line-height: 1.12;
   padding: 0px 50px;
   /* opacity: 0; */
@@ -296,6 +296,131 @@ section {
 .masked {
   clip-path: circle(25% at 50% 50%);
 }
+
+
+
+
+
+
+.banner-container {
+  cursor: none;
+  overflow: hidden;
+}
+
+.banner-container .cursor {
+  position: fixed;
+  background: #2128bd;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: -10px 0 0 -10px;
+  will-change: transform;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.banner-container .shapes {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #2128bd;
+}
+
+.banner-container .shapes .shape {
+  will-change: transform;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.banner-container .shapes .shape.shape-1 {
+  background-color: #005ffe;
+  width: 650px;
+  height: 650px;
+  margin: -325px 0 0 -325px;
+}
+
+.banner-container .shapes .shape.shape-2 {
+  background-color: #ffe5e3;
+  width: 440px;
+  height: 440px;
+  margin: -220px 0 0 -220px;
+}
+
+.banner-container .shapes .shape.shape-3 {
+  background-color: #ffcc57;
+  width: 270px;
+  height: 270px;
+  margin: -135px 0 0 -135px;
+}
+
+.banner-container .banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #ffff;
+  mix-blend-mode: screen;
+}
+
+.banner-container .banner-content .banner-text {
+  color: black;
+  margin: 0;
+  font-size: 130px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+.banner-container .banner-content .txt {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  color: red;
+}
+
+/* Media Queries for Tablet and Phone */
+@media (max-width: 768px) {
+  .banner-container .banner-content {
+    display: block;
+  }
+  
+  .banner-container .banner-content .banner-text {
+    font-size: 100px;
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .banner-container .banner-content .txt {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container .banner-content {
+    display: block;
+  }
+  
+  .banner-container .banner-content .banner-text {
+    font-size: 80px;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .banner-container .banner-content .txt {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+
 
 @media (max-width: 767px) {
   .container {
@@ -327,10 +452,10 @@ section {
   }
 
   .text {
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.2;
     padding: 0px 16px;
-    height: 300px;
+    /* height: 300px; */
   }
 
   .frame-single img {

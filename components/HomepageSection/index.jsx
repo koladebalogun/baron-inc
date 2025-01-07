@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import cn from "classnames";
-// import useOnScreen from "../utils/useOnscreen";
-import CursorManager, { CursorContext } from "../CustomCursor/CursorManager";
+import { CursorContext } from "../CustomCursor/CursorManager";
 import useOnScreen from "../../utils/useOnscreen";
 import { motion } from "framer-motion";
 import styles from "@/styles/HomepageSection.module.css";
@@ -79,7 +78,7 @@ const GalleryItem = ({ imageDetails }) => {
             )}
             data-scroll
             style={{
-              backgroundImage: `url('/IMG6.JPG')`,
+              backgroundImage: `url('/image8.jpg')`,
               width: imageDetails.width,
               height: imageDetails.height,
             }}
@@ -88,7 +87,7 @@ const GalleryItem = ({ imageDetails }) => {
           <div
             className={`${styles.galleryitemimage} ${styles.masked}`}
             style={{
-              backgroundImage: `url('/IMG6.JPG')`,
+              backgroundImage: `url('/image8.jpg')`,
               clipPath: `circle(${clipMaskRadius}% at ${clipMask.x}% ${clipMask.y}%)`,
               width: imageDetails.width,
               height: imageDetails.height,
@@ -119,8 +118,9 @@ const ProjectGallery = () => {
       <div className={`${styles.gallery} gallery`}>
         <h3 className={styles.projecttext}>
           {" "}
-          PROJECTS
+          About BARON-INC
         </h3>
+        <p className={styles.text}>Please click on the image to know our story and mission</p>
         <GalleryItem imageDetails={imageDetails} />
       </div>
     </section>
