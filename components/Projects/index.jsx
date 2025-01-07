@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "../../styles/Projects.module.css";
-import Socials from "../Socials"
+import Socials from "../Socials";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -105,11 +105,7 @@ export default function Projects() {
       <div className={styles.mainwrapper} ref={containerRef}>
         <section className={styles.section} ref={sectionRef}>
           <div className={styles.sectioninner}>
-            <img
-              src="/image10.jpg"
-              className={styles.video1}
-              ref={video1Ref}
-            />
+            <img src="/image10.jpg" className={styles.video1} ref={video1Ref} />
             <img
               src="/image10.jpg"
               // autoPlay
@@ -121,7 +117,7 @@ export default function Projects() {
 
             <div className={styles.titleContainer} ref={titleRef}>
               <div className={styles.title}>
-                <h1>Artists we've worked with {">"}</h1>
+                <h1>Artists we&apos;ve worked with {">"}</h1>
               </div>
             </div>
           </div>
@@ -129,7 +125,6 @@ export default function Projects() {
 
         <section className={styles.section2}>
           <div className={styles.nav}>
-            {/* <div className={styles.navitem}>gallery</div> */}
           </div>
           <div className={styles.container}>
             <div className={styles.items}>
@@ -149,9 +144,7 @@ export default function Projects() {
                   <img src="/image12.jpg" alt="" />
                   <div className={styles.imageoverlay}></div>
                   <div className={styles.itemcopy}>
-                    <div className={styles.itemname}>
-                      Mayorkun
-                    </div>
+                    <div className={styles.itemname}>Mayorkun</div>
                     {/* <div className={styles.id}>2</div> */}
                   </div>
                 </div>
