@@ -6,7 +6,6 @@ import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-
 export default function Page() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -43,7 +42,10 @@ export default function Page() {
             scrub: true,
             onUpdate: (self) => {
               let progress = self.progress;
-              let newWidth = window.innerWidth < 768 ? 70 + 50 * progress : 150 + 100 * progress;
+              let newWidth =
+                window.innerWidth < 768
+                  ? 70 + 50 * progress
+                  : 150 + 100 * progress;
               gsap.to(imgContainer, {
                 width: newWidth + "%",
                 duration: 0.1,
@@ -59,7 +61,10 @@ export default function Page() {
             scrub: true,
             onUpdate: (self) => {
               let progress = self.progress;
-              let newWidth = window.innerWidth < 768 ? 250 + 50 * progress : 550 + 100 * progress;
+              let newWidth =
+                window.innerWidth < 768
+                  ? 250 + 50 * progress
+                  : 550 + 100 * progress;
               gsap.to(service, {
                 width: newWidth + "px",
                 duration: 0.1,
@@ -73,7 +78,10 @@ export default function Page() {
       });
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
 
     services.forEach((service) => {
       observer.observe(service);
@@ -82,7 +90,7 @@ export default function Page() {
     // Cleanup on component unmount
     return () => {
       services.forEach((service) => {
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
         observer.unobserve(service);
       });
     };
@@ -91,24 +99,26 @@ export default function Page() {
   const serviceData = [
     {
       title: "ARTIST PROMOTION",
-      description: "Promoting your content to the right audience with precision and impact.",
-      image: "/image6.jpg"
+      description:
+        "Promoting your content to the right audience with precision and impact.",
+      image: "/image6.jpg",
     },
     {
       title: "ARTIST BOOKINGS",
       description: "Connecting artists to top media platforms and interviews.",
-      image: "/image7.jpg"
+      image: "/image7.jpg",
     },
     {
       title: "TALENT MANAGEMENT",
       description: "Placing your music on curated, genre-specific playlists.",
-      image: "/image10.jpg"
+      image: "/image10.jpg",
     },
     {
       title: "TALENT BOOKING",
-      description: "Securing verified profiles to build your brand's credibility.",
-      image: "/image5.jpg"
-    }
+      description:
+        "Securing and organizing global music shows to push audience engagement and solidify the credibility of your brand and talent",
+      image: "/image5.jpg",
+    },
   ];
 
   return (

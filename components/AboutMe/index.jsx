@@ -90,12 +90,7 @@ export default function AboutMe() {
                   y: 0,
                 }}
                 className="details"
-              >
-                <div className="location">
-                  <span>6.5244° N</span>
-                  <span>-3.3792° E</span>
-                </div>
-              </motion.div>
+              ></motion.div>
               <motion.div className="model">
                 <motion.span className="first" variants={firstName}>
                   <motion.span variants={letter}>B</motion.span>
@@ -113,10 +108,6 @@ export default function AboutMe() {
                   <motion.span variants={letter}>S</motion.span>
                 </motion.span>
               </motion.div>
-
-              <div>
-                <p style={{color:"#FEBE10"}}>scroll down</p>
-              </div>
             </div>
           </div>
           <div className="row bottom-row">
@@ -162,15 +153,30 @@ export default function AboutMe() {
           <div className="container">
             <div className="text">
               <p>
+              Baron Inc Entertainment is dynamic
+                music company established in 2019 that specializes in the
+                discovery, development, and promotion of Afrobeats & Francophone
+                artists. We are also actively involved in the production and
+                promotion of musical concerts across the UK, hosting notable
+                Afrobeats stars. Baron Inc Entertainment prides itself on
+                identifying promising talent and nurturing them through every
+                step of their artistic journey. The company’s touring and A&R
+                experts actively scout emerging and established musicians,
+                providing them with creative direction and industry insights to
+                help refine their sound and stand out in a crowded market, also
+                providing them with the structure to tour across UK & Europe.
+                <br/>
+                <br/>
                 At Baron-inc Events, we’re driven by a passion for delivering
-                unparalleled experiences in entertainment and sports. From
-                curating unforgettable events to nurturing top-tier talent,
-                we’re here to bring your visions to life and help you achieve
-                your goals. Every project we undertake is thoughtfully
-                crafted with precision and creativity, ensuring that you feel
-                empowered, celebrated, and at the center of the action. Our
-                team is dedicated to providing exceptional support, whether
-                you’re an entertainer, or enthusiast. At Baron-inc, it’s about creating a legacy worth remembering.
+                unparalleled experiences in entertainment. From curating
+                unforgettable events to nurturing top-tier talent, we’re here to
+                bring your visions to life and help you achieve your goals.
+                Every project we undertake is thoughtfully crafted with
+                precision and creativity, ensuring that you feel empowered,
+                celebrated, and at the center of the action. Our team is
+                dedicated to providing exceptional support, whether you’re an
+                entertainer, or enthusiast. At Baron-inc, it’s about creating a
+                legacy worth remembering.
               </p>
             </div>
           </div>
