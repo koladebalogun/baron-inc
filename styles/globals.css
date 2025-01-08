@@ -431,10 +431,12 @@ section {
 
 
 
-@media (max-width: 767px) {
+@media (min-width: 350px)  and (max-width: 767px) {
   .container {
     padding: 0 16px;
-    height: 500px;
+    height: 100%;
+    /* display: none; */
+
   }
 
   .single .container .top-row {
@@ -464,6 +466,8 @@ section {
     line-height: 1.2;
     padding: 0px 16px;
     margin-bottom: 20px;
+    position: absolute;
+    top: -30%;
     /* height: 300px; */
   }
 
