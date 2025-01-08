@@ -87,7 +87,6 @@ export default function Page() {
       observer.observe(service);
     });
 
-    // Cleanup on component unmount
     return () => {
       services.forEach((service) => {
         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());

@@ -265,6 +265,7 @@ section {
   height: 80vh;
   padding-bottom: 50px;
 }
+
 .detailed-information .container .row {
   justify-content: space-between;
   align-items: flex-start;
@@ -272,6 +273,7 @@ section {
 .detailed-information .container .row h2 {
   font-size: 28px;
 }
+
 .detailed-information .container .row p {
   font-weight: 400;
   font-style: normal;
@@ -284,13 +286,9 @@ section {
 
 .text {
   font-size: 30px;
-  /* line-height: 1.12; */
   padding: 0px 50px;
   font-family: "Roboto", serif;
   font-weight: 400;
-
-  
-  /* opacity: 0; */
 }
 
 .wrapper .is-reveal .image-container {
@@ -463,6 +461,7 @@ section {
     font-size: 20px;
     line-height: 1.2;
     padding: 0px 16px;
+    margin-bottom: 20px;
     /* height: 300px; */
   }
 
@@ -490,6 +489,10 @@ section {
   .single .container .bottom-row .scroll-for-more {
     bottom: 150px;
     left: 100px;
+  }
+
+  .detailed-information{
+    margin-bottom: 50px;
   }
 
   .detailed-information .container .row p {

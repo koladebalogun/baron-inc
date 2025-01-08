@@ -183,7 +183,17 @@
   }
 
   .projecttext {
-    font-size: 50px;
-    right: 2%;
+    font-size: 45px;
+    /* right: 2%; */
+  }
+
+  .text{
+    position: absolute;
+    z-index: 1;
+    left: 2%;
+    bottom: 40%;
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
   }
 }

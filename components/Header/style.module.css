@@ -14,9 +14,11 @@
 }
 
 @media (max-width: 768px) {
-  .nav {
-    
-    padding: 10px;
-   
+  .menu {
+    width: 280px;
+    height: 450px;
+    background-color: #FEBE10;
+    border-radius: 25px;
+    position: relative;
   }
 }
