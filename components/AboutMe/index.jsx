@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
-import gsap from "gsap";
-import SplitText from "../../utils/Split3.min.js";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -9,10 +7,9 @@ const imageDetails = {
   width: 524,
   height: 640,
 };
+
 const firstName = {
-  initial: {
-    y: 0,
-  },
+  initial: { y: 0 },
   animate: {
     y: 0,
     transition: {
@@ -24,9 +21,7 @@ const firstName = {
 };
 
 const lastName = {
-  initial: {
-    y: 0,
-  },
+  initial: { y: 0 },
   animate: {
     y: 0,
     transition: {
@@ -38,42 +33,58 @@ const lastName = {
 };
 
 const letter = {
-  initial: {
-    y: 400,
-  },
-  animate: {
-    y: 0,
-    transition: { duration: 1, ...transition },
-  },
+  initial: { y: 400 },
+  animate: { y: 0, transition: { duration: 1, ...transition } },
 };
 
 export default function AboutMe() {
   const scrollRef = useRef(null);
-  const textRef = useRef(null);
-  const [windowWidth, setWindowWidth] = useState();
-  const { scrollYProgress } = useViewportScroll();
+  const [windowWidth, setWindowWidth] = useState(null);
+  const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 
-  const [canScroll, setCanScroll] = useState(false);
+  const [canScroll, setCanScroll] = useState(true);
 
+  // Hard refresh logic
   useEffect(() => {
-    if (canScroll === false) {
-      document.querySelector("body").classList.add("no-scroll");
-    } else {
-      document.querySelector("body").classList.remove("no-scroll");
+    const shouldReload = !sessionStorage.getItem("pageReloaded");
+    if (shouldReload) {
+      sessionStorage.setItem("pageReloaded", "true");
+      window.location.reload();
     }
-  }, [canScroll]);
-
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
   }, []);
 
-  console.log(windowWidth);
+  // Ensure scrolling is enabled on page load
+  useEffect(() => {
+    const body = document.querySelector("body");
+    if (body) {
+      body.classList.remove("no-scroll");
+    }
+    setCanScroll(true); // Allow scrolling immediately
+  }, []);
+
+  // Handle resizing (browser only)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleResize = () => setWindowWidth(window.innerWidth);
+      setWindowWidth(window.innerWidth); // Set initial width
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
 
   return (
     <div className="maincon">
       <motion.div
-        onAnimationComplete={() => setCanScroll(true)}
+        onAnimationComplete={() => {
+          const body = document.querySelector("body");
+          if (body) {
+            body.classList.remove("no-scroll"); // Ensure no-scroll is removed after animation
+          }
+          setCanScroll(true);
+        }}
         className="single"
         initial="initial"
         animate="animate"
@@ -122,7 +133,7 @@ export default function AboutMe() {
                   animate={{
                     y: 0,
                     width: "100%",
-                    height: windowWidth > 1440 ? 800 : 400,
+                    height: windowWidth && windowWidth > 1440 ? 800 : 400,
                     transition: { delay: 0.2, ...transition },
                   }}
                   className="thumbnail-single"
@@ -139,34 +150,33 @@ export default function AboutMe() {
                       initial={{ scale: 1.0 }}
                       animate={{
                         transition: { delay: 0.2, ...transition },
-                        y: windowWidth > 1440 ? -1200 : -600,
+                        y: windowWidth && windowWidth > 1440 ? -1200 : -600,
                       }}
                     />
                   </motion.div>
                 </motion.div>
               </motion.div>
             </div>
-            {/* <ScrollForMore /> */}
           </div>
         </div>
         <div className="detailed-information">
           <div className="container">
             <div className="text">
               <p>
-              Baron Inc Entertainment is dynamic
-                music company established in 2019 that specializes in the
-                discovery, development, and promotion of Afrobeats & Francophone
-                artists. We are also actively involved in the production and
-                promotion of musical concerts across the UK, hosting notable
-                Afrobeats stars. Baron Inc Entertainment prides itself on
-                identifying promising talent and nurturing them through every
-                step of their artistic journey. The company’s touring and A&R
-                experts actively scout emerging and established musicians,
-                providing them with creative direction and industry insights to
-                help refine their sound and stand out in a crowded market, also
-                providing them with the structure to tour across UK & Europe.
-                <br/>
-                <br/>
+                Baron Inc Entertainment is dynamic music company established in
+                2019 that specializes in the discovery, development, and
+                promotion of Afrobeats & Francophone artists. We are also
+                actively involved in the production and promotion of musical
+                concerts across the UK, hosting notable Afrobeats stars. Baron
+                Inc Entertainment prides itself on identifying promising talent
+                and nurturing them through every step of their artistic journey.
+                The company’s touring and A&R experts actively scout emerging
+                and established musicians, providing them with creative
+                direction and industry insights to help refine their sound and
+                stand out in a crowded market, also providing them with the
+                structure to tour across UK & Europe.
+                <br />
+                <br />
                 At Baron-inc Events, we’re driven by a passion for delivering
                 unparalleled experiences in entertainment. From curating
                 unforgettable events to nurturing top-tier talent, we’re here to

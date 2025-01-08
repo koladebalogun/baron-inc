@@ -61,7 +61,7 @@ export default function Home() {
 
   return (
     <div ref={mainRef}>
-      <section
+      {/* <section
         className={style.container}
         ref={containerRef}
         data-scroll-section
@@ -126,7 +126,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
       <HomepageSection />
     </div>
   );
