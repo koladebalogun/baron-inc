@@ -12,3 +12,11 @@
   border-radius: 25px;
   position: relative;
 }
+
+@media (max-width: 768px) {
+  .nav {
+    
+    padding: 10px;
+   
+  }
+}
