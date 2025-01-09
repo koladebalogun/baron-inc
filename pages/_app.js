@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
     <Layout>
     <CursorManager>
       <CustomCursor />
-      <AnimatePresence initial={false} mode='wait'>
+      <AnimatePresence >
         <Component {...pageProps} />
       </AnimatePresence>
     </CursorManager>

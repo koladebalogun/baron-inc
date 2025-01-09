@@ -61,7 +61,7 @@ const GalleryItem = ({ imageDetails }) => {
         mouseContext.setSize("small");
       }}
     >
-      <Link href="/About">
+      <a href="/About">
         <div
           className={`${styles.galleryitem} galleryitem`}
           ref={ref}
@@ -95,7 +95,7 @@ const GalleryItem = ({ imageDetails }) => {
             data-scroll
           ></div>
         </div>
-      </Link>
+      </a>
       <motion.div
         exit={{ opacity: 0 }}
         transition={transition}

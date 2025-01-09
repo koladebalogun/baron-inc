@@ -6,10 +6,8 @@ import Projects from "../components/Projects";
 export default function Test2() {
   return (
     <div>
-      <Layout>
         <AboutMe />
         <Projects />
-      </Layout>
     </div>
   );
 }

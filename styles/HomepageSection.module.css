@@ -24,7 +24,7 @@
 .galleryitem {
   width: 524px;
   height: 640px;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   will-change: transform;
   clip-path: inset(100% 0% 0% 0%);

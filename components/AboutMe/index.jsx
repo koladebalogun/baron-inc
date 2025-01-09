@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -38,58 +38,44 @@ const letter = {
 };
 
 export default function AboutMe() {
-  const scrollRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(null);
-  const { scrollYProgress } = useScroll();
+  const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 
   const [canScroll, setCanScroll] = useState(true);
 
-  // Hard refresh logic
   useEffect(() => {
-    const shouldReload = !sessionStorage.getItem("pageReloaded");
-    if (shouldReload) {
-      sessionStorage.setItem("pageReloaded", "true");
-      window.location.reload();
+    if (canScroll === false) {
+      document.querySelector("body").classList.add("no-scroll");
+    } else {
+      document.querySelector("body").classList.remove("no-scroll");
     }
+  }, [canScroll]);
+
+  useEffect(() => {
+    document.body.style.overflow = "auto"; // Ensure scrolling is enabled
+  
+    return () => {
+      document.body.style.overflow = ""; // Cleanup on unmount
+    };
   }, []);
 
-  // Ensure scrolling is enabled on page load
-  useEffect(() => {
-    const body = document.querySelector("body");
-    if (body) {
-      body.classList.remove("no-scroll");
-    }
-    setCanScroll(true); // Allow scrolling immediately
-  }, []);
-
-  // Handle resizing (browser only)
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleResize = () => setWindowWidth(window.innerWidth);
-      setWindowWidth(window.innerWidth); // Set initial width
-      window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, []);
+  // useEffect(() => {
+  //   const shouldReload = !sessionStorage.getItem("pageReloaded");
+  //   if (shouldReload) {
+  //     sessionStorage.setItem("pageReloaded", "true");
+  //     window.location.reload();
+  //   }
+  // }, []);
 
   return (
     <div className="maincon">
       <motion.div
-        onAnimationComplete={() => {
-          const body = document.querySelector("body");
-          if (body) {
-            body.classList.remove("no-scroll"); // Ensure no-scroll is removed after animation
-          }
-          setCanScroll(true);
-        }}
+        onAnimationComplete={() => setCanScroll(true)}
         className="single"
         initial="initial"
         animate="animate"
         exit="exit"
-        ref={scrollRef}
       >
         <div className="container fluid">
           <div className="row center top-row">
