@@ -53,20 +53,12 @@ export default function AboutMe() {
   }, [canScroll]);
 
   useEffect(() => {
-    document.body.style.overflow = "auto"; // Ensure scrolling is enabled
+    document.body.style.overflow = "auto";
   
     return () => {
-      document.body.style.overflow = ""; // Cleanup on unmount
+      document.body.style.overflow = "";
     };
   }, []);
-
-  // useEffect(() => {
-  //   const shouldReload = !sessionStorage.getItem("pageReloaded");
-  //   if (shouldReload) {
-  //     sessionStorage.setItem("pageReloaded", "true");
-  //     window.location.reload();
-  //   }
-  // }, []);
 
   return (
     <div className="maincon">
