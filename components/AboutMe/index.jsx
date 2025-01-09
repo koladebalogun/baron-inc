@@ -157,7 +157,7 @@ export default function AboutMe() {
                 <br />
                 At Baron-inc Events, we’re driven by a passion for delivering
                 unparalleled experiences in entertainment. From curating
-                unforgettable events to nurturing top-tier talent, we’re here to
+                unforgettable events to nurturing top-tier talents, we’re here to
                 bring your visions to life and help you achieve your goals.
                 Every project we undertake is thoughtfully crafted with
                 precision and creativity, ensuring that you feel empowered,
